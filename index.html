@@ -7,16 +7,21 @@
 <meta name="description" content="Andrea Di Sciullo, video editor e colorist a Roma. Montaggio di spot, documentari e video social, color correction e grading. Lavori per Sky, Rai Tre, Prime Video, Confindustria e Luiss.">
 <meta name="author" content="Andrea Di Sciullo">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#5c5f61">
+<link rel="canonical" href="https://andreacolor29.github.io/">
+<meta name="theme-color" content="#12181b">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="Andrea Di Sciullo">
 <meta property="og:title" content="Andrea Di Sciullo – Video editor e colorist a Roma">
 <meta property="og:description" content="Montaggio e color grading per televisione, spot e social. Guarda lo showreel e i progetti.">
-<meta property="og:image" content="img/og.jpg">
+<meta property="og:url" content="https://andreacolor29.github.io/">
+<meta property="og:image" content="https://andreacolor29.github.io/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Andrea Di Sciullo, video editor e colorist">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://andreacolor29.github.io/img/og.jpg">
 
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +35,8 @@
   "name": "Andrea Di Sciullo",
   "jobTitle": "Video editor e colorist",
   "description": "Video editor e colorist a Roma: montaggio di spot, documentari e contenuti social, color correction e grading.",
-  "image": "img/og.jpg",
+  "image": "https://andreacolor29.github.io/img/og.jpg",
+  "url": "https://andreacolor29.github.io/",
   "email": "mailto:andreadisciullo.business@gmail.com",
   "telephone": "+393313593114",
   "address": { "@type": "PostalAddress", "addressLocality": "Roma", "addressCountry": "IT" },
@@ -44,185 +50,198 @@
 
 <style>
   :root {
-    --surround: #5c5f61;   /* neutral grey of a grading room */
-    --panel:    #4a4d4f;
-    --panel-hi: #3b3e40;
-    --text:     #f4f3f0;
-    --muted:    #d3d4d2;
-    --rule:     rgba(255,255,255,.22);
-    --link:     #ffd9a0;   /* the orange of the portrait, lifted for contrast */
-    --red:      #ee6a55;
-    --green:    #5fcb8a;
-    --blue:     #6aa2f5;
-    --pad: clamp(20px, 5vw, 64px);
-    --max: 1240px;
+    --bg:      #12181b;   /* the shadow tone of the portrait */
+    --bg-2:    #182126;
+    --bg-3:    #1f2b31;
+    --text:    #efece6;
+    --muted:   #a9b4b8;
+    --rule:    rgba(239,236,230,.16);
+    --orange:  #f28c3c;   /* the sweater */
+    --teal:    #34b9b2;   /* the rim light */
+    --pad: clamp(20px, 5vw, 72px);
+    --max: 1320px;
   }
   *, *::before, *::after { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--surround);
-    color: var(--text);
-    font-family: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
-    font-size: 1.0625rem;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 1.0625rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
   img { max-width: 100%; display: block; }
-  a { color: var(--link); text-underline-offset: .2em; text-decoration-thickness: 1px; }
-  a:hover { text-decoration-thickness: 2px; }
-  :focus-visible { outline: 3px solid #fff; outline-offset: 3px; border-radius: 2px; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 3px; }
   .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
-  .skip { position: absolute; left: -999px; top: 8px; background: #fff; color: #000; padding: 8px 14px; z-index: 10; }
+  .skip { position: absolute; left: -999px; top: 8px; background: #fff; color: #000; padding: 8px 14px; z-index: 30; }
   .skip:focus { left: 8px; }
 
-  /* header */
-  header.top { padding: 22px 0; }
-  header.top .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; flex-wrap: wrap; }
-  .mark { font-weight: 700; color: var(--text); text-decoration: none; letter-spacing: -.01em; }
-  nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: clamp(14px, 3vw, 32px); flex-wrap: wrap; }
-  nav a { color: var(--text); text-decoration: none; padding: 4px 0; border-bottom: 1px solid transparent; }
-  nav a:hover { border-bottom-color: var(--text); }
+  /* nav */
+  .nav { position: sticky; top: 0; z-index: 20; background: rgba(18,24,27,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--rule); }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+  .mark { font-weight: 800; letter-spacing: -.02em; text-decoration: none; font-size: 1.1rem; }
+  .nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: clamp(14px, 2.6vw, 34px); align-items: center; }
+  .nav ul a { text-decoration: none; color: var(--muted); padding: 6px 0; border-bottom: 2px solid transparent; }
+  .nav ul a:hover { color: var(--text); border-bottom-color: var(--orange); }
+  .pill { display: inline-block; padding: 11px 22px; border-radius: 999px; background: var(--orange); color: #1a1209; font-weight: 700; text-decoration: none; border: 2px solid var(--orange); transition: background .2s, color .2s; }
+  .pill:hover { background: transparent; color: var(--orange); }
+  .pill.ghost { background: transparent; color: var(--text); border-color: var(--rule); }
+  .pill.ghost:hover { border-color: var(--text); color: var(--text); }
+  .nav ul a.pill { padding: 8px 18px; color: #1a1209; border-bottom: 2px solid var(--orange); }
+  .nav ul a.pill:hover { background: transparent; color: var(--orange); }
 
   /* hero */
-  .hero { padding: clamp(24px, 5vw, 56px) 0 clamp(40px, 6vw, 72px); }
-  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(28px, 5vw, 80px); align-items: end; }
-  h1 {
-    margin: 0;
-    font-size: clamp(3.2rem, 9.2vw, 8.6rem);
-    line-height: .9;
-    font-weight: 800;
-    letter-spacing: -.045em;
-    font-variation-settings: "opsz" 96;
-  }
+  .hero { position: relative; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 0; align-items: end; min-height: min(88vh, 860px); }
+  .hero-copy { position: relative; z-index: 2; padding: clamp(40px, 7vw, 96px) 0 clamp(36px, 5vw, 72px); align-self: center; }
+  h1 { margin: 0; font-size: clamp(3.4rem, 10.5vw, 10rem); line-height: .86; font-weight: 800; letter-spacing: -.05em; font-variation-settings: "opsz" 96; pointer-events: none; }
   h1 span { display: block; }
-  .role { margin: clamp(20px, 3vw, 36px) 0 0; font-size: clamp(1.35rem, 2.6vw, 2rem); line-height: 1.25; font-weight: 500; letter-spacing: -.01em; max-width: 22ch; }
-  .tagline { margin: 14px 0 0; color: var(--muted); max-width: 46ch; }
-  .actions { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
-  .btn { display: inline-block; padding: 13px 22px; border-radius: 999px; font-weight: 700; text-decoration: none; border: 2px solid var(--text); color: var(--text); }
-  .btn.solid { background: var(--text); color: #232527; }
-  .btn:hover { background: var(--link); border-color: var(--link); color: #232527; }
+  h1 span + span { margin-right: -.9em; }
+  .role { margin: clamp(22px, 3vw, 40px) 0 0; font-size: clamp(1.4rem, 2.8vw, 2.2rem); line-height: 1.2; font-weight: 500; letter-spacing: -.015em; }
+  .tagline { margin: 14px 0 0; color: var(--muted); max-width: 42ch; font-size: 1.125rem; }
+  .actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
 
-  /* grade slider */
-  .grade { margin: 0; }
-  .stage { position: relative; aspect-ratio: 2 / 3; max-height: 78vh; margin: 0 auto; background: #000; overflow: hidden; border-radius: 4px; touch-action: pan-y; --pos: 100%; }
+  .grade { position: relative; margin: 0; align-self: end; }
+  .stage { position: relative; aspect-ratio: 2 / 3; max-height: 88vh; margin-left: auto; --pos: 100%; touch-action: pan-y; overflow: hidden; background: var(--bg); }
   .stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .stage .flat { filter: saturate(.18) contrast(.55) brightness(1.35); clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
-  .stage .bar { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: #fff; pointer-events: none; }
-  .stage .knob { position: absolute; top: 50%; left: var(--pos); width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; background: #fff; color: #232527; display: grid; place-items: center; pointer-events: none; box-shadow: 0 2px 10px rgba(0,0,0,.4); }
+  .stage .flat { filter: saturate(.15) contrast(.5) brightness(1.4); clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+  .stage .fade { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, var(--bg) 0, rgba(18,24,27,0) 22%), linear-gradient(0deg, var(--bg) 0, rgba(18,24,27,0) 12%); }
+  .stage .bar { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: var(--text); pointer-events: none; }
+  .stage .knob { position: absolute; top: 56%; left: var(--pos); width: 48px; height: 48px; margin: -24px 0 0 -24px; border-radius: 50%; background: var(--text); color: var(--bg); display: grid; place-items: center; pointer-events: none; box-shadow: 0 4px 18px rgba(0,0,0,.5); }
   .stage .knob svg { width: 22px; height: 22px; }
   .stage input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
-  .stage:has(input:focus-visible) .knob { outline: 3px solid var(--link); outline-offset: 3px; }
-  .grade figcaption { margin-top: 12px; font-size: .9375rem; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; }
+  .stage:has(input:focus-visible) .knob { outline: 3px solid var(--orange); outline-offset: 3px; }
+  .grade figcaption { position: absolute; left: 0; right: 0; bottom: 14px; padding: 0 16px; display: flex; justify-content: space-between; font-size: .9rem; color: var(--text); text-shadow: 0 1px 8px rgba(0,0,0,.9); pointer-events: none; }
 
-  /* greyscale step wedge, the colorist's reference chart */
-  .wedge { display: flex; height: 18px; }
-  .wedge i { flex: 1; }
+  /* clients */
+  .clients { border-block: 1px solid var(--rule); background: var(--bg-2); }
+  .clients .wrap { padding-block: 26px; display: flex; flex-wrap: wrap; gap: 8px 36px; align-items: baseline; }
+  .clients p { margin: 0; color: var(--muted); }
+  .clients ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 32px; font-size: clamp(1.15rem, 2.2vw, 1.6rem); font-weight: 700; letter-spacing: -.02em; }
 
-  section { padding: clamp(56px, 8vw, 104px) 0; }
-  h2 { margin: 0 0 clamp(26px, 4vw, 44px); font-size: clamp(2rem, 4.6vw, 3.6rem); line-height: 1; letter-spacing: -.035em; font-weight: 800; }
-  h3 { margin: 0; font-size: 1.35rem; line-height: 1.2; letter-spacing: -.015em; font-weight: 700; }
+  section { padding: clamp(64px, 9vw, 120px) 0; }
+  h2 { margin: 0; font-size: clamp(2.4rem, 6vw, 5rem); line-height: .95; letter-spacing: -.045em; font-weight: 800; }
+  .head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 20px 40px; margin-bottom: clamp(28px, 4vw, 52px); }
+  .head p { margin: 0; color: var(--muted); max-width: 40ch; }
 
   /* showreel */
-  .reel { position: relative; aspect-ratio: 16 / 9; background: #111; border-radius: 4px; overflow: hidden; }
+  .reel-sec { padding-top: clamp(56px, 8vw, 104px); padding-bottom: 0; }
+  .reel { position: relative; aspect-ratio: 16 / 9; background: #000; overflow: hidden; border-radius: 6px; box-shadow: 0 30px 80px -30px rgba(0,0,0,.8); }
   .reel button, .reel iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .reel button { padding: 0; cursor: pointer; background: #111; color: #fff; font: inherit; }
-  .reel button img { width: 100%; height: 100%; object-fit: cover; opacity: .8; transition: opacity .2s; }
-  .reel button:hover img { opacity: 1; }
-  .reel .play { position: absolute; left: clamp(16px, 3vw, 32px); bottom: clamp(16px, 3vw, 32px); display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: clamp(1.1rem, 2.4vw, 1.6rem); text-shadow: 0 1px 12px rgba(0,0,0,.7); }
-  .reel .play b { width: 56px; height: 56px; border-radius: 50%; background: #fff; color: #232527; display: grid; place-items: center; }
-  .reel .play svg { width: 22px; height: 22px; margin-left: 3px; }
+  .reel button { padding: 0; cursor: pointer; background: #000; color: #fff; font: inherit; }
+  .reel button img { width: 100%; height: 100%; object-fit: cover; opacity: .72; transition: opacity .25s, transform .6s ease; }
+  .reel button:hover img { opacity: .95; transform: scale(1.015); }
+  .reel .play { position: absolute; left: clamp(18px, 3vw, 40px); bottom: clamp(18px, 3vw, 40px); display: flex; align-items: center; gap: 16px; font-weight: 800; font-size: clamp(1.4rem, 3.4vw, 2.6rem); letter-spacing: -.03em; text-shadow: 0 2px 18px rgba(0,0,0,.8); }
+  .reel .play b { width: clamp(56px, 7vw, 84px); height: clamp(56px, 7vw, 84px); border-radius: 50%; background: var(--orange); color: #1a1209; display: grid; place-items: center; }
+  .reel .play svg { width: 36%; height: 36%; margin-left: 4px; }
 
-  .group { margin-top: clamp(44px, 6vw, 72px); }
-  .group header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
-  .group header .dot { width: 14px; height: 14px; border-radius: 50%; flex: none; transform: translateY(1px); }
-  .group header p { margin: 0 0 0 auto; color: var(--muted); font-size: .95rem; text-align: right; }
-  .cards { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 22px; }
-  .card a { display: block; color: var(--text); text-decoration: none; }
-  .thumb { position: relative; aspect-ratio: 16 / 9; background: var(--panel-hi); border-radius: 3px; overflow: hidden; }
-  .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
-  .card a:hover .thumb img { transform: scale(1.03); }
-  .card a:hover h3 { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .2em; }
-  .card h3 { margin-top: 12px; font-size: 1.15rem; }
-  .card p { margin: 2px 0 0; color: var(--muted); font-size: .95rem; }
-
-  .social { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 0 32px; }
-  .social li { border-bottom: 1px solid var(--rule); }
-  .social a { display: flex; justify-content: space-between; gap: 12px; padding: 14px 0; color: var(--text); text-decoration: none; font-weight: 500; }
-  .social a span { color: var(--muted); font-weight: 400; }
-  .social a:hover { color: var(--link); }
-
-  /* about */
-  .about { background: var(--panel); }
-  .about .wrap { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(28px, 6vw, 96px); align-items: start; }
-  .about .lead { font-size: clamp(1.25rem, 2.2vw, 1.7rem); line-height: 1.4; letter-spacing: -.01em; margin: 0 0 1.2em; max-width: 34ch; }
-  .about p { max-width: 58ch; }
-  .about ul { list-style: none; margin: 0; padding: 0; }
-  .about li { padding: 11px 0; border-bottom: 1px solid var(--rule); }
-  .about h3 { margin: 28px 0 6px; font-size: 1.1rem; }
-  .about h3:first-child { margin-top: 0; }
-  .portrait-sm { display: none; }
+  /* works */
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; }
+  .filters button { font: inherit; font-weight: 500; color: var(--muted); background: transparent; border: 1px solid var(--rule); border-radius: 999px; padding: 9px 18px; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+  .filters button:hover { color: var(--text); border-color: var(--text); }
+  .filters button[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .grid > li[hidden] { display: none; }
+  .tile { position: relative; display: block; width: 100%; overflow: hidden; border-radius: 6px; background: var(--bg-3); color: var(--text); text-decoration: none; isolation: isolate; }
+  .tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; z-index: -2; }
+  .tile::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(10,14,16,.92) 0, rgba(10,14,16,.35) 46%, rgba(10,14,16,0) 72%); }
+  .tile:hover img { transform: scale(1.05); }
+  .tile .meta { position: absolute; left: 18px; right: 18px; bottom: 16px; }
+  .tile h3 { margin: 0; font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; letter-spacing: -.025em; font-weight: 700; }
+  .tile .by { display: flex; align-items: center; gap: 8px; margin-top: 4px; color: #d9dfe1; font-size: .95rem; }
+  .tile .by i { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+  .tile .badge { position: absolute; top: 14px; right: 14px; width: 42px; height: 42px; border-radius: 50%; background: var(--orange); color: #1a1209; display: grid; place-items: center; opacity: 0; transform: scale(.85); transition: opacity .2s, transform .2s; }
+  .tile .badge svg { width: 16px; height: 16px; margin-left: 2px; }
+  .tile:hover .badge, .tile:focus-visible .badge { opacity: 1; transform: none; }
+  .grid > li { display: grid; aspect-ratio: 16 / 10; }
+  .grid > li[data-c="social"] { aspect-ratio: 16 / 8; }
+  .grid > li.wide { grid-column: span 2; aspect-ratio: auto; }
+  .tile.ig { background: linear-gradient(135deg, #1f2b31, #182126); border: 1px solid var(--rule); }
+  .tile.ig::after { display: none; }
+  .tile.ig .meta { top: 18px; bottom: auto; }
+  .tile.ig h3 { font-size: clamp(1.4rem, 2.4vw, 2rem); }
+  .tile.ig .by { color: var(--muted); }
+  .tile.ig .go { position: absolute; left: 18px; bottom: 16px; color: var(--orange); font-weight: 600; }
+  .tile.ig:hover { border-color: var(--orange); }
+  .grid-note { margin: 28px 0 0; color: var(--muted); }
 
   /* services */
-  .services { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
-  .services li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 12px 40px; padding: 26px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
-  .services h3 { font-size: clamp(1.4rem, 2.8vw, 2.1rem); letter-spacing: -.025em; }
-  .services p { margin: 0; color: var(--muted); max-width: 52ch; }
+  .svc { background: var(--bg-2); }
+  .svc ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+  .svc li { position: relative; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 10px 48px; align-items: baseline; padding: clamp(24px, 3.4vw, 40px) 0; border-bottom: 1px solid var(--rule); transition: padding-left .25s; }
+  .svc li::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--orange); transition: width .25s; }
+  .svc li:hover { padding-left: 24px; }
+  .svc li:hover::before { width: 5px; }
+  .svc h3 { margin: 0; font-size: clamp(1.7rem, 4vw, 3.2rem); line-height: 1; letter-spacing: -.04em; font-weight: 800; }
+  .svc p { margin: 0; color: var(--muted); max-width: 44ch; }
+
+  /* about */
+  .about { position: relative; isolation: isolate; background: #0d1215 url("img/timeline.jpg") center / cover no-repeat; }
+  .about::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(13,18,21,.97) 0, rgba(13,18,21,.9) 48%, rgba(13,18,21,.62) 100%); }
+  .about .wrap { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 6vw, 110px); align-items: start; }
+  .about .lead { margin: 22px 0 0; font-size: clamp(1.3rem, 2.4vw, 1.9rem); line-height: 1.3; letter-spacing: -.02em; max-width: 24ch; color: var(--text); }
+  .about p { max-width: 58ch; margin: 0 0 1.1em; }
+  .cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; margin-top: 34px; }
+  .cols h3 { margin: 0 0 10px; font-size: 1.1rem; color: var(--teal); }
+  .cols ul { list-style: none; margin: 0; padding: 0; }
+  .cols li { padding: 9px 0; border-top: 1px solid var(--rule); }
 
   /* contact */
-  .contact { background: var(--panel-hi); }
-  .contact h2 { max-width: 14ch; }
-  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px 40px; }
-  .contact-grid dt { color: var(--muted); font-size: .95rem; }
-  .contact-grid dd { margin: 2px 0 0; font-size: clamp(1.15rem, 2vw, 1.4rem); font-weight: 600; letter-spacing: -.01em; overflow-wrap: anywhere; }
-  .contact-grid .wide { grid-column: span 2; }
-  @media (max-width: 640px) { .contact-grid .wide { grid-column: auto; } }
-  .contact-grid a { color: var(--text); text-decoration-color: var(--link); }
-  .contact-grid a:hover { color: var(--link); }
+  .contact h2 { max-width: 12ch; }
+  .mail { display: inline-block; margin-top: clamp(28px, 4vw, 48px); font-size: clamp(1.2rem, 4.2vw, 3.6rem); line-height: 1.1; font-weight: 800; letter-spacing: -.045em; text-decoration: none; overflow-wrap: anywhere; border-bottom: 3px solid var(--orange); }
+  .mail:hover { color: var(--orange); }
+  .contact .actions { margin-top: 36px; }
+  .links { list-style: none; margin: 44px 0 0; padding: 22px 0 0; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 8px 36px; color: var(--muted); }
+  .links a { color: var(--text); text-decoration-color: var(--teal); text-underline-offset: .22em; }
+  .links a:hover { color: var(--orange); }
 
-  footer { background: var(--panel-hi); padding: 0 0 36px; color: var(--muted); font-size: .9rem; }
-  footer .row { border-top: 1px solid var(--rule); padding-top: 22px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  footer { border-top: 1px solid var(--rule); padding: 24px 0 34px; color: var(--muted); font-size: .9rem; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 
-  @media (max-width: 860px) {
-    .hero .wrap, .about .wrap { grid-template-columns: 1fr; }
-    .stage { max-height: 70vh; }
-    .services li { grid-template-columns: 1fr; }
-    .group header { flex-wrap: wrap; }
-    .group header p { margin-left: 0; text-align: left; width: 100%; }
+  @media (max-width: 960px) {
+    .hero .wrap { grid-template-columns: 1fr; min-height: 0; }
+    .hero-copy { padding-bottom: 8px; }
+    h1 span + span { margin-right: 0; }
+    .stage { margin: 0 auto; max-height: 76vh; }
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid > li.wide { aspect-ratio: 16 / 8; }
+    .about .wrap { grid-template-columns: 1fr; }
+    .about::before { background: rgba(13,18,21,.9); }
+    .svc li { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 620px) {
+    .nav ul li:not(:last-child) { display: none; }
+    .grid { grid-template-columns: 1fr; }
+    .grid > li.wide { grid-column: auto; aspect-ratio: 16 / 10; }
+    .grid > li[data-c="social"] { aspect-ratio: 16 / 7; }
+    .cols { grid-template-columns: 1fr; gap: 26px; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .thumb img, .reel button img { transition: none; }
+    *, *::before, *::after { transition: none !important; }
   }
 </style>
 </head>
 <body>
 <a class="skip" href="#lavori">Vai ai lavori</a>
 
-<header class="top">
+<nav class="nav" aria-label="Principale">
   <div class="wrap">
-    <a class="mark" href="#">Andrea Di Sciullo</a>
-    <nav aria-label="Principale">
-      <ul>
-        <li><a href="#lavori">Lavori</a></li>
-        <li><a href="#chi-sono">Chi sono</a></li>
-        <li><a href="#servizi">Servizi</a></li>
-        <li><a href="#contatti">Contatti</a></li>
-      </ul>
-    </nav>
+    <a class="mark" href="#top">Andrea Di Sciullo</a>
+    <ul>
+      <li><a href="#lavori">Lavori</a></li>
+      <li><a href="#servizi">Servizi</a></li>
+      <li><a href="#chi-sono">Chi sono</a></li>
+      <li><a class="pill" href="#contatti">Scrivimi</a></li>
+    </ul>
   </div>
-</header>
+</nav>
 
-<main>
+<main id="top">
   <div class="hero">
     <div class="wrap">
-      <div>
+      <div class="hero-copy">
         <h1><span>Andrea</span><span>Di Sciullo</span></h1>
         <p class="role">Video editor e colorist a Roma</p>
         <p class="tagline">Creo video che raccontano storie, emozionano e restano impressi nella memoria.</p>
         <div class="actions">
-          <a class="btn solid" href="#lavori">Guarda lo showreel</a>
-          <a class="btn" href="https://wa.me/393313593114">Scrivimi su WhatsApp</a>
+          <a class="pill" href="#showreel">Guarda lo showreel</a>
+          <a class="pill ghost" href="#lavori">Vedi i lavori</a>
         </div>
       </div>
 
@@ -230,10 +249,9 @@
         <div class="stage" id="stage">
           <img src="img/andrea.jpg" width="1100" height="1650" alt="Ritratto di Andrea Di Sciullo con occhiali e maglione arancione, in luce teal e arancio">
           <img class="flat" src="img/andrea.jpg" width="1100" height="1650" alt="" aria-hidden="true">
+          <div class="fade"></div>
           <div class="bar"></div>
-          <div class="knob" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg>
-          </div>
+          <div class="knob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></div>
           <input type="range" min="0" max="100" value="100" id="slider" aria-label="Confronto tra girato piatto e immagine con grading">
         </div>
         <figcaption><span>Girato piatto</span><span>Con grading</span></figcaption>
@@ -241,64 +259,68 @@
     </div>
   </div>
 
-  <div class="wedge" aria-hidden="true">
-    <i style="background:#0d0d0d"></i><i style="background:#262626"></i><i style="background:#3f3f3f"></i><i style="background:#585858"></i><i style="background:#717171"></i><i style="background:#8a8a8a"></i><i style="background:#a3a3a3"></i><i style="background:#bcbcbc"></i><i style="background:#d5d5d5"></i><i style="background:#eaeaea"></i><i style="background:#fafafa"></i>
+  <div class="clients">
+    <div class="wrap">
+      <p>Hanno visto il mio lavoro</p>
+      <ul>
+        <li>Sky</li><li>Rai Tre</li><li>Prime Video</li><li>MTV</li><li>Confindustria</li><li>Luiss</li>
+      </ul>
+    </div>
   </div>
 
-  <section id="lavori">
+  <section class="reel-sec" id="showreel">
     <div class="wrap">
-      <h2>Lavori</h2>
-
-      <div class="reel" id="reel">
+      <div class="reel">
         <button type="button" id="reel-btn" aria-label="Riproduci lo showreel di Andrea Di Sciullo">
           <img src="https://i.ytimg.com/vi/KAOx5ZbhPjo/maxresdefault.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/KAOx5ZbhPjo/hqdefault.jpg'">
           <span class="play"><b><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></b>Showreel</span>
         </button>
       </div>
+    </div>
+  </section>
 
-      <div class="group">
-        <header>
-          <span class="dot" style="background:var(--blue)"></span>
-          <h3>Televisione</h3>
-          <p>Montaggio e color correction</p>
-        </header>
-        <ul class="cards">
-          <li class="card"><a href="https://www.youtube.com/watch?v=hGyYXL2enaE" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/hGyYXL2enaE/hqdefault.jpg" alt=""></div><h3>Good Morning Italia</h3><p>Sky</p></a></li>
-          <li class="card"><a href="https://www.youtube.com/watch?v=LNrBPQ3-VGE" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/LNrBPQ3-VGE/hqdefault.jpg" alt=""></div><h3>Involontaria – L’esame</h3><p>Prime Video e MTV</p></a></li>
-          <li class="card"><a href="https://www.youtube.com/watch?v=BgsyKdsObxY&amp;list=PL8aY1TW4q-N5AzE0VjFWeWVeLeXL4wJ9U&amp;index=8" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/BgsyKdsObxY/hqdefault.jpg" alt=""></div><h3>Storie delle Nostre Città</h3><p>Rai Tre</p></a></li>
-          <li class="card"><a href="https://www.youtube.com/watch?v=87CnJZmRCiQ" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/87CnJZmRCiQ/hqdefault.jpg" alt=""></div><h3>Pubblicità Progresso</h3><p>Rai</p></a></li>
-          <li class="card"><a href="https://www.youtube.com/watch?v=0Qyqdi83jHE" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/0Qyqdi83jHE/hqdefault.jpg" alt=""></div><h3>Frequency Modulation</h3><p>Università per lo Storytelling</p></a></li>
-        </ul>
+  <section id="lavori">
+    <div class="wrap">
+      <div class="head">
+        <h2>Lavori</h2>
+        <div class="filters" role="group" aria-label="Filtra i lavori">
+          <button type="button" data-f="all" aria-pressed="true">Tutti</button>
+          <button type="button" data-f="tv" aria-pressed="false">Televisione</button>
+          <button type="button" data-f="spot" aria-pressed="false">Spot</button>
+          <button type="button" data-f="social" aria-pressed="false">Social</button>
+        </div>
       </div>
 
-      <div class="group">
-        <header>
-          <span class="dot" style="background:var(--red)"></span>
-          <h3>Spot e video istituzionali</h3>
-          <p>Montaggio e motion graphic</p>
-        </header>
-        <ul class="cards">
-          <li class="card"><a href="https://www.youtube.com/watch?v=iPaQQF9E-cA" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/iPaQQF9E-cA/hqdefault.jpg" alt=""></div><h3>Giovani Imprenditori</h3><p>Confindustria</p></a></li>
-          <li class="card"><a href="https://www.youtube.com/watch?v=EriVkrivpxc" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/EriVkrivpxc/hqdefault.jpg" alt=""></div><h3>Campagna MIO</h3><p>Mediterranean Italian Offshore</p></a></li>
-          <li class="card"><a href="https://www.youtube.com/watch?v=lUOoLplcypM" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/lUOoLplcypM/hqdefault.jpg" alt=""></div><h3>Video istituzionale</h3><p>Luiss</p></a></li>
-        </ul>
-      </div>
+      <ul class="grid" id="grid">
+        <li class="wide" data-c="tv"><a class="tile" href="https://www.youtube.com/watch?v=hGyYXL2enaE" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/hGyYXL2enaE/hqdefault.jpg" alt=""><span class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span><span class="meta"><h3>Good Morning Italia</h3><span class="by"><i style="background:var(--teal)"></i>Sky, televisione</span></span></a></li>
+        <li data-c="tv"><a class="tile" href="https://www.youtube.com/watch?v=LNrBPQ3-VGE" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/LNrBPQ3-VGE/hqdefault.jpg" alt=""><span class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span><span class="meta"><h3>Involontaria – L’esame</h3><span class="by"><i style="background:var(--teal)"></i>Prime Video e MTV</span></span></a></li>
+        <li data-c="tv"><a class="tile" href="https://www.youtube.com/watch?v=BgsyKdsObxY&amp;list=PL8aY1TW4q-N5AzE0VjFWeWVeLeXL4wJ9U&amp;index=8" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/BgsyKdsObxY/hqdefault.jpg" alt=""><span class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span><span class="meta"><h3>Storie delle Nostre Città</h3><span class="by"><i style="background:var(--teal)"></i>Rai Tre</span></span></a></li>
+        <li data-c="spot"><a class="tile" href="https://www.youtube.com/watch?v=iPaQQF9E-cA" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/iPaQQF9E-cA/hqdefault.jpg" alt=""><span class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span><span class="meta"><h3>Giovani Imprenditori</h3><span class="by"><i style="background:var(--orange)"></i>Confindustria, spot</span></span></a></li>
+        <li data-c="tv"><a class="tile" href="https://www.youtube.com/watch?v=87CnJZmRCiQ" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/87CnJZmRCiQ/hqdefault.jpg" alt=""><span class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span><span class="meta"><h3>Pubblicità Progresso</h3><span class="by"><i style="background:var(--teal)"></i>Rai</span></span></a></li>
+        <li data-c="spot"><a class="tile" href="https://www.youtube.com/watch?v=EriVkrivpxc" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/EriVkrivpxc/hqdefault.jpg" alt=""><span class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span><span class="meta"><h3>Campagna MIO</h3><span class="by"><i style="background:var(--orange)"></i>Mediterranean Italian Offshore, spot</span></span></a></li>
+        <li data-c="tv"><a class="tile" href="https://www.youtube.com/watch?v=0Qyqdi83jHE" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/0Qyqdi83jHE/hqdefault.jpg" alt=""><span class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span><span class="meta"><h3>Frequency Modulation</h3><span class="by"><i style="background:var(--teal)"></i>Università per lo Storytelling</span></span></a></li>
+        <li data-c="spot"><a class="tile" href="https://www.youtube.com/watch?v=lUOoLplcypM" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/lUOoLplcypM/hqdefault.jpg" alt=""><span class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span><span class="meta"><h3>Video istituzionale</h3><span class="by"><i style="background:var(--orange)"></i>Luiss</span></span></a></li>
 
-      <div class="group">
-        <header>
-          <span class="dot" style="background:var(--green)"></span>
-          <h3>Social</h3>
-          <p>Contenuti video per queste pagine Instagram</p>
-        </header>
-        <ul class="social">
-          <li><a href="https://www.instagram.com/comus_locandaconviviale/reel/DEhf2-4tawJ/" target="_blank" rel="noopener">Comus <span>Instagram</span></a></li>
-          <li><a href="https://www.instagram.com/heco.eur/" target="_blank" rel="noopener">Heco <span>Instagram</span></a></li>
-          <li><a href="https://www.instagram.com/komugisushi/" target="_blank" rel="noopener">Komugi Sushi <span>Instagram</span></a></li>
-          <li><a href="https://www.instagram.com/gelateria_igolosoni/" target="_blank" rel="noopener">I Golosoni <span>Instagram</span></a></li>
-          <li><a href="https://www.instagram.com/teichnerdal1922/" target="_blank" rel="noopener">Teichner <span>Instagram</span></a></li>
-          <li><a href="https://www.instagram.com/giunoneclubofficial/" target="_blank" rel="noopener">Giunone Club <span>Instagram</span></a></li>
-        </ul>
-      </div>
+        <li data-c="social"><a class="tile ig" href="https://www.instagram.com/comus_locandaconviviale/reel/DEhf2-4tawJ/" target="_blank" rel="noopener"><span class="meta"><h3>Comus</h3><span class="by"><i style="background:#c77dff"></i>Reel per Instagram</span></span><span class="go">Apri su Instagram</span></a></li>
+        <li data-c="social"><a class="tile ig" href="https://www.instagram.com/heco.eur/" target="_blank" rel="noopener"><span class="meta"><h3>Heco</h3><span class="by"><i style="background:#c77dff"></i>Contenuti per Instagram</span></span><span class="go">Apri su Instagram</span></a></li>
+        <li data-c="social"><a class="tile ig" href="https://www.instagram.com/komugisushi/" target="_blank" rel="noopener"><span class="meta"><h3>Komugi Sushi</h3><span class="by"><i style="background:#c77dff"></i>Contenuti per Instagram</span></span><span class="go">Apri su Instagram</span></a></li>
+        <li data-c="social"><a class="tile ig" href="https://www.instagram.com/gelateria_igolosoni/" target="_blank" rel="noopener"><span class="meta"><h3>I Golosoni</h3><span class="by"><i style="background:#c77dff"></i>Contenuti per Instagram</span></span><span class="go">Apri su Instagram</span></a></li>
+        <li data-c="social"><a class="tile ig" href="https://www.instagram.com/teichnerdal1922/" target="_blank" rel="noopener"><span class="meta"><h3>Teichner</h3><span class="by"><i style="background:#c77dff"></i>Contenuti per Instagram</span></span><span class="go">Apri su Instagram</span></a></li>
+        <li data-c="social"><a class="tile ig" href="https://www.instagram.com/giunoneclubofficial/" target="_blank" rel="noopener"><span class="meta"><h3>Giunone Club</h3><span class="by"><i style="background:#c77dff"></i>Contenuti per Instagram</span></span><span class="go">Apri su Instagram</span></a></li>
+      </ul>
+      <p class="grid-note">Per televisione e spot ho curato montaggio e color correction. Per i social creo regolarmente i contenuti video delle pagine.</p>
+    </div>
+  </section>
+
+  <section class="svc" id="servizi">
+    <div class="wrap">
+      <div class="head"><h2>Servizi</h2></div>
+      <ul>
+        <li><h3>Montaggio video per social</h3><p>Reel e video per le pagine di brand, locali e attività.</p></li>
+        <li><h3>Color correction e grading</h3><p>Immagini uniformi e con un look coerente, dal girato alla consegna.</p></li>
+        <li><h3>Montaggio di spot pubblicitari</h3><p>Spot per televisione e web, con motion graphic quando serve.</p></li>
+        <li><h3>Promo video per brand e agenzie</h3><p>Video promozionali e istituzionali per aziende e agenzie creative.</p></li>
+      </ul>
     </div>
   </section>
 
@@ -311,57 +333,51 @@
       <div>
         <p>Sono un professionista del montaggio video e della color correction. Ho collaborato con Sky Arte, Rai Tre e diverse agenzie creative, realizzando spot, documentari e contenuti social con un forte impatto visivo.</p>
         <p>Oggi lavoro in un’agenzia di comunicazione strategica e seguo l’intero processo di post-produzione.</p>
-
-        <h3>Post-produzione</h3>
-        <ul>
-          <li>Montaggio narrativo</li>
-          <li>Color correction professionale</li>
-          <li>Gestione del workflow e dell’archiviazione (QNAP, QfinderPro)</li>
-        </ul>
-
-        <h3>Competenze aggiuntive</h3>
-        <ul>
-          <li>SEO base e SEO audit</li>
-          <li>Social media strategy</li>
-          <li>Copywriting e grafica per i social</li>
-          <li>Google Ads</li>
-          <li>Suite Office 365</li>
-        </ul>
+        <div class="cols">
+          <div>
+            <h3>Post-produzione</h3>
+            <ul>
+              <li>Montaggio narrativo</li>
+              <li>Color correction professionale</li>
+              <li>Workflow e archiviazione (QNAP, QfinderPro)</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Competenze aggiuntive</h3>
+            <ul>
+              <li>SEO base e SEO audit</li>
+              <li>Social media strategy</li>
+              <li>Copywriting e grafica per i social</li>
+              <li>Google Ads</li>
+              <li>Suite Office 365</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section id="servizi">
-    <div class="wrap">
-      <h2>Servizi</h2>
-      <ul class="services">
-        <li><h3>Montaggio video per social</h3><p>Reel e video per le pagine di brand, locali e attività.</p></li>
-        <li><h3>Color correction e grading</h3><p>Immagini uniformi e con un look coerente, dal girato alla consegna.</p></li>
-        <li><h3>Montaggio di spot pubblicitari</h3><p>Spot per televisione e web, con motion graphic quando serve.</p></li>
-        <li><h3>Promo video per brand e agenzie</h3><p>Video promozionali e istituzionali per aziende e agenzie creative.</p></li>
-      </ul>
     </div>
   </section>
 
   <section class="contact" id="contatti">
     <div class="wrap">
       <h2>Parliamo del tuo video</h2>
-      <dl class="contact-grid">
-        <div class="wide"><dt>Email</dt><dd><a href="mailto:andreadisciullo.business@gmail.com">andreadisciullo.business@gmail.com</a></dd></div>
-        <div><dt>Telefono</dt><dd><a href="tel:+393313593114">+39 331 359 3114</a></dd></div>
-        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/393313593114">Scrivimi su WhatsApp</a></dd></div>
-        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/disciullo_colorist/" target="_blank" rel="noopener">@disciullo_colorist</a></dd></div>
-        <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/andrea-di-sciullo/" target="_blank" rel="noopener">Andrea Di Sciullo</a></dd></div>
-      </dl>
+      <a class="mail" href="mailto:andreadisciullo.business@gmail.com">andreadisciullo.business@gmail.com</a>
+      <div class="actions">
+        <a class="pill" href="https://wa.me/393313593114">Scrivimi su WhatsApp</a>
+        <a class="pill ghost" href="tel:+393313593114">Chiama +39 331 359 3114</a>
+      </div>
+      <ul class="links">
+        <li><a href="https://www.instagram.com/disciullo_colorist/" target="_blank" rel="noopener">Instagram @disciullo_colorist</a></li>
+        <li><a href="https://www.linkedin.com/in/andrea-di-sciullo/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap"><div class="row">
+  <div class="wrap">
     <span>© <span id="y">2026</span> Andrea Di Sciullo</span>
     <span>Video editor e colorist, Roma</span>
-  </div></div>
+  </div>
 </footer>
 
 <script>
@@ -373,21 +389,21 @@
 
   // One opening gesture: the frame starts flat and the grade sweeps in.
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var end = 38;
+  var end = 36;
   if (reduce) { slider.value = end; set(end); }
   else {
-    var start = null, from = 100, dur = 1800, touched = false;
+    var start = null, from = 100, dur = 2000, touched = false;
     slider.addEventListener('pointerdown', function () { touched = true; });
     slider.addEventListener('keydown', function () { touched = true; });
-    function ease(t) { return 1 - Math.pow(1 - t, 3); }
-    function step(ts) {
+    var ease = function (t) { return 1 - Math.pow(1 - t, 3); };
+    var step = function (ts) {
       if (touched) return;
       if (start === null) start = ts;
       var t = Math.min((ts - start) / dur, 1);
       var v = from + (end - from) * ease(t);
       slider.value = v; set(v);
       if (t < 1) requestAnimationFrame(step);
-    }
+    };
     setTimeout(function () { requestAnimationFrame(step); }, 500);
   }
 
@@ -402,8 +418,25 @@
     btn.replaceWith(f);
   });
 
-  // Hide a thumbnail that fails to load, so the card keeps its dark placeholder.
-  document.querySelectorAll('.thumb img').forEach(function (i) { i.addEventListener('error', function () { i.style.display = 'none'; }); });
+  // Filter the works.
+  var buttons = document.querySelectorAll('.filters button');
+  var items = document.querySelectorAll('#grid > li');
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = b.getAttribute('data-f');
+      buttons.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      items.forEach(function (li) {
+        var show = f === 'all' || li.getAttribute('data-c') === f;
+        li.hidden = !show;
+        // The wide tile only makes sense in the mixed view.
+        li.classList.toggle('wide', f === 'all' && li.hasAttribute('data-wide'));
+      });
+    });
+  });
+  document.querySelector('#grid > li.wide').setAttribute('data-wide', '');
+
+  // Hide a thumbnail that fails to load, so the tile keeps its dark placeholder.
+  document.querySelectorAll('.tile img').forEach(function (i) { i.addEventListener('error', function () { i.style.display = 'none'; }); });
 
   document.getElementById('y').textContent = new Date().getFullYear();
 })();
